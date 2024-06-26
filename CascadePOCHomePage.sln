@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CascadePOCHomePage", "CascadePOCHomePage.csproj", "{46CB3144-0CB6-4108-8BA1-9F35A3903CB2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46CB3144-0CB6-4108-8BA1-9F35A3903CB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46CB3144-0CB6-4108-8BA1-9F35A3903CB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46CB3144-0CB6-4108-8BA1-9F35A3903CB2}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{46CB3144-0CB6-4108-8BA1-9F35A3903CB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46CB3144-0CB6-4108-8BA1-9F35A3903CB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46CB3144-0CB6-4108-8BA1-9F35A3903CB2}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A83D399-92A8-4B91-A1D9-29A6C9387573}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CascadePOCHomePage.View.HomePage"
+             Title="HomePage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#840ea2">
+    <Grid RowDefinitions="Auto,Auto,*">
+
+        <!--Name Header & Title-->
+        <Grid Grid.Row="0" ColumnDefinitions="0.5*,0.5*" Margin="25,25,25,0">
+            <Label Grid.Column="0" Text="Hi Rose!" TextColor="White" FontSize="Title" FontAttributes="Bold" FontAutoScalingEnabled="True" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"/>
+            <Label Grid.Column="1" Text="Today's Summary" TextColor="#ff379b" FontSize="Subtitle" FontAttributes="Bold" FontAutoScalingEnabled="True" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
+        </Grid>
+
+        <Grid Grid.Row="1" ColumnDefinitions="Auto,Auto,Auto,Auto,Auto" HorizontalOptions="CenterAndExpand" Margin="0,10">
+
+            <Frame Grid.Column="0" Margin="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                <StackLayout>
+                    <Label Text="4" TextColor="#ff379b" FontSize="Title" FontAttributes="Bold" FontAutoScalingEnabled="True" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="Meetings" TextColor="#ff379b" FontSize="Default" FontAttributes="Bold" FontAutoScalingEnabled="True"  HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Frame>
+
+            <Line Grid.Column="1" Stroke="Pink" Y2="100" VerticalOptions="CenterAndExpand"/>
+
+            <Frame Grid.Column="2" Margin="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                <StackLayout>
+                    <Label Text="2" TextColor="#ff379b" FontSize="Title" FontAttributes="Bold" FontAutoScalingEnabled="True" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="Reminders" TextColor="#ff379b" FontSize="Default" FontAttributes="Bold" FontAutoScalingEnabled="True"  HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Frame>
+
+            <Line Grid.Column="3" Stroke="Pink" Y2="100" VerticalOptions="CenterAndExpand"/>
+
+            <Frame Grid.Column="4" Margin="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                <StackLayout>
+                    <Label Text="8" TextColor="#ff379b" FontSize="Title" FontAttributes="Bold" FontAutoScalingEnabled="True" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="Meetings" TextColor="#ff379b" FontSize="Default" FontAttributes="Bold" FontAutoScalingEnabled="True"  HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </Frame>
+        </Grid>
+
+        <Border Grid.Row="2" StrokeShape="RoundRectangle 25,25,0,0" BackgroundColor="White">
+            <ScrollView>
+                <StackLayout Margin="10,25,10,10">
+                    <!--Pending Approvals-->
+                    <Label Text="Pending Aprrovals" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+                    <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="CenterAndExpand" Margin="0,15">
+                        <Frame BorderColor="#840ea2" BackgroundColor="LightCyan">
+                            <StackLayout>
+                                <Image Source="leave.png" HeightRequest="50" WidthRequest="50"/>
+                                <Label Text="Leave" TextColor="#840ea2" FontSize="Subtitle" FontAttributes="Bold" HorizontalOptions="Center"/>
+                                <Label Text="3 Pending" TextColor="Black" FontSize="Default" HorizontalOptions="Center"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BorderColor="#840ea2" BackgroundColor="LightCyan">
+                            <StackLayout>
+                                <Image Source="time.png" HeightRequest="50" WidthRequest="50"/>
+                                <Label Text="Time" TextColor="#840ea2" FontSize="Subtitle" FontAttributes="Bold" HorizontalOptions="Center"/>
+                                <Label Text="All Done!" TextColor="Black" FontSize="Default" HorizontalOptions="Center"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BorderColor="#840ea2" BackgroundColor="LightCyan">
+                            <StackLayout>
+                                <Image Source="expenses.png" HeightRequest="50" WidthRequest="50"/>
+                                <Label Text="Expenses" TextColor="#840ea2" FontSize="Subtitle" FontAttributes="Bold" HorizontalOptions="Center"/>
+                                <Label Text="All Done!" TextColor="Black" FontSize="Default" HorizontalOptions="Center"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <!--Who's off Today-->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Who's Off Tocday" TextColor="Black" FontSize="Medium" FontAttributes="Bold" Padding="0,0,5,0"/>
+                        <Label Text="(" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+                        <Label Text="6" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+                        <Label Text=")" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <!--<CarouselView x:Name="LeaveEmployee" ItemsSource="{Binding Pages}" >
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BorderColor="Transparent">
+                                    <StackLayout>
+                                        <Border HeightRequest="40" 
+                                                    WidthRequest="40"
+                                                    StrokeShape="RoundRectangle 50,50,50,50"
+                                                    HorizontalOptions="Center"
+                                                    StrokeThickness="8"
+                                                    Margin="0,0,0,10">
+                                            <Image Source="dotnet_bot.png" Aspect="AspectFit" HeightRequest="40" WidthRequest="40" />
+                                        </Border>
+                                        <Label Text="{Binding .}" FontSize="15" LineBreakMode="WordWrap" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAutoScalingEnabled="True"/>
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>-->
+                    <CarouselView x:Name="LeaveEmployee" ItemsSource="{Binding Pages}" HorizontalScrollBarVisibility="Always" PeekAreaInsets="100">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame BorderColor="Transparent">
+                                    <StackLayout>
+                                        <Border HeightRequest="80" 
+                                                WidthRequest="80"
+                                                StrokeShape="RoundRectangle 80,80,80,80"
+                                                HorizontalOptions="Center"
+                                                StrokeThickness="2"
+                                                Margin="0,0,0,0">
+                                            <Image Source="dotnet_bot.png" Aspect="AspectFit" HeightRequest="80" WidthRequest="80" />
+                                        </Border>
+                                        <Label Text="{Binding .}" FontSize="15" LineBreakMode="WordWrap" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAutoScalingEnabled="True"/>
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <!--My Team-->
+                    <Label Text="My Team" TextColor="Black" FontSize="Medium" FontAttributes="Bold" FontAutoScalingEnabled="True"/>
+                    <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10" Margin="0,15">
+                        <Frame Grid.Column="0" BorderColor="#840ea2" BackgroundColor="LightCyan">
+                            <StackLayout>
+                                <Label Text="7" TextColor="#840ea2" FontSize="Title" FontAttributes="Bold" FontAutoScalingEnabled="True" HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="Working From Home" TextColor="Black" FontSize="Default" FontAutoScalingEnabled="True" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Grid.Column="1" BorderColor="#840ea2" BackgroundColor="LightCyan">
+                            <StackLayout>
+                                <Label Text="2" TextColor="#840ea2" FontSize="Title" FontAttributes="Bold" FontAutoScalingEnabled="True" HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="Birthday Celebrations" TextColor="Black" FontSize="Default" FontAutoScalingEnabled="True" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />
+                            </StackLayout>
+                        </Frame>
+                        <Frame Grid.Column="2" BorderColor="#840ea2" BackgroundColor="LightCyan">
+                            <StackLayout>
+                                <Label Text="1" TextColor="#840ea2" FontSize="Title" FontAttributes="Bold" FontAutoScalingEnabled="True" HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="Work Anniversary" TextColor="Black" FontSize="Default" FontAutoScalingEnabled="True" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                    <!--Payment Section-->
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="15" Margin="0,15">
+                        <Frame Grid.Column="0" BackgroundColor="#ff379b" CornerRadius="20">
+                            <Label Text="Request Absence" TextColor="White" FontSize="Default" FontAutoScalingEnabled="True" HorizontalOptions="CenterAndExpand"/>
+                        </Frame>
+                        <Frame Grid.Column="1" BackgroundColor="#ff379b" CornerRadius="20">
+                            <Label Text="View Payslips" TextColor="White" FontSize="Default" FontAutoScalingEnabled="True" HorizontalOptions="CenterAndExpand"/>
+                        </Frame>
+                    </Grid>
+                    <!--Holiday Summary-->
+                    <Label Text="Holiday Summary" TextColor="Black" FontSize="Medium" FontAttributes="Bold" FontAutoScalingEnabled="True"/>
+                    <Grid ColumnDefinitions="Auto,Auto,Auto" HorizontalOptions="CenterAndExpand" Margin="0,15">
+                        <Frame Grid.Column="0" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                            <StackLayout>
+                                <Label Text="4" TextColor="#840ea2" FontSize="Title" FontAttributes="Bold" FontAutoScalingEnabled="True" HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="Remaining" TextColor="Black" FontSize="Default" FontAttributes="Bold" FontAutoScalingEnabled="True"  HorizontalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Grid.Column="1" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" Margin="10">
+                            <StackLayout>
+                                <Label Text="2" TextColor="#840ea2" FontSize="Title" FontAttributes="Bold" FontAutoScalingEnabled="True" HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="Pending" TextColor="Black" FontSize="Default" FontAttributes="Bold" FontAutoScalingEnabled="True"  HorizontalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Grid.Column="2" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                            <StackLayout>
+                                <Label Text="8" TextColor="#840ea2" FontSize="Title" FontAttributes="Bold" FontAutoScalingEnabled="True" HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="Entitlement" TextColor="Black" FontSize="Default" FontAttributes="Bold" FontAutoScalingEnabled="True"  HorizontalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                    <!--Pending to Submit-->
+                    <Label Text="Pending To Submit" TextColor="Black" FontSize="Medium" FontAttributes="Bold" FontAutoScalingEnabled="True"/>
+                    <Grid ColumnDefinitions="*,*" ColumnSpacing="15" Margin="0,15">
+                        <Frame Grid.Column="0" BackgroundColor="LightCyan" CornerRadius="20">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="time.png" HeightRequest="15" WidthRequest="15" Margin="5"/>
+                                    <Label Text="Time" FontSize="Medium" TextColor="Black" Margin="5" FontAutoScalingEnabled="True"/>
+                                </StackLayout>
+                                <Label Text="$ 1,250.00" FontSize="Title" TextColor="#840ea2" FontAttributes="Bold" FontAutoScalingEnabled="True"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame Grid.Column="1" BackgroundColor="LightCyan" CornerRadius="20">
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Image Source="expenses.png" HeightRequest="15" WidthRequest="15" Margin="5"/>
+                                    <Label Text="Expenses" FontSize="Medium" TextColor="Black" Margin="5" FontAutoScalingEnabled="True"/>
+                                </StackLayout>
+                                <Label Text="$ 248.30" FontSize="Title" TextColor="#840ea2" FontAttributes="Bold" FontAutoScalingEnabled="True"/>
+                            </StackLayout>
+                        </Frame>
+                    </Grid>
+                    <!--Training Available-->
+                    <Frame BackgroundColor="LightGrey" CornerRadius="0" Margin="0,15">
+                        <StackLayout>
+                            <Label Text="Training Available" TextColor="Black" FontSize="Medium" FontAttributes="Bold" FontAutoScalingEnabled="True"/>
+                            <BoxView HeightRequest="1" Margin="0,5"/>
+                            <Label Text="Presenting with impact" TextColor="#840ea2" FontSize="Subtitle" FontAttributes="Bold" FontAutoScalingEnabled="True"/>
+                            <Grid ColumnDefinitions="Auto,*,Auto">
+                                <Image Grid.Column="0" Source="people.png" HeightRequest="20" WidthRequest="20" Margin="5"/>
+                                <Label Grid.Column="1" Text="5 Spots Left" TextColor="Black" FontSize="Subtitle" Margin="5"/>
+                                <Label Grid.Column="2" Text="5 June" TextColor="Black" FontSize="Subtitle" Margin="5"/>
+                            </Grid>
+
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </Border>
+    </Grid>
+</ContentPage>

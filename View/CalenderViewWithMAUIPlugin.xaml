@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Plugin.Maui.Calendar.Controls;assembly=Plugin.Maui.Calendar" 
+             x:Class="CascadePOCHomePage.View.CalenderViewWithMAUIPlugin"
+             Title="CalenderViewWithMAUIPlugin"
+             BackgroundColor="White"
+             x:Name="advancedCalendarPage">
+    <StackLayout>
+        <controls:MonthDaysView
+            DeselectedDayTextColor="Aqua"
+            x:Name="CalenderViewWithMAUIPluginx"
+            Events="{Binding Events}"
+            BackgroundColor="White">
+            <controls:MonthDaysView.ControlTemplate>
+                <ControlTemplate>
+                    <StackLayout
+                        Padding="15,0,0,0">
+                        <Label Text="{Binding Name}"
+                               FontAttributes="Bold"
+                               FontSize="Medium" />
+                        <Label Text="{Binding Description}"
+                               FontSize="Small"
+                               LineBreakMode="WordWrap" />
+                    </StackLayout>
+                </ControlTemplate>
+            </controls:MonthDaysView.ControlTemplate>
+        </controls:MonthDaysView>
+    </StackLayout>
+</ContentPage>

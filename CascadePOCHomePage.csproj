@@ -59,6 +59,11 @@
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\font-awesome-5-free-regular.otf" />
 	  <None Remove="Resources\Fonts\font-awesome-5-free-solid.otf" />
+	  <None Remove="Resources\Fonts\fontawesome-webfont.ttf" />
+	  <None Remove="Resources\Fonts\FontAwesome.ttf" />
+	  <None Remove="Resources\Fonts\museo_slab_300-webfont.ttf" />
+	  <None Remove="Resources\Fonts\museo_slab_500-webfont.ttf" />
+	  <None Remove="Resources\Fonts\proximanova-webfont.ttf" />
 	  <None Remove="Resources\Images\expenses.png" />
 	  <None Remove="Resources\Images\home.png" />
 	  <None Remove="Resources\Images\leave.png" />

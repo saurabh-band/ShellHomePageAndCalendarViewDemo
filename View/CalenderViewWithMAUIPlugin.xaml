@@ -7,7 +7,7 @@
              Title="CalenderViewWithMAUIPlugin"
              BackgroundColor="White"
              x:Name="advancedCalendarPage">
-    <!--<cal:Calendar
+    <cal:Calendar
         Events="{Binding Events}"
             EventsScrollViewVisible="True">
         <cal:Calendar.EventTemplate>
@@ -18,17 +18,5 @@
                 </VerticalStackLayout>
             </DataTemplate>
         </cal:Calendar.EventTemplate>
-    </cal:Calendar>-->
-    <cal:Calendar
-        AnimateCalendar="True"
-        HeaderSectionVisible="True"
-        HorizontalOptions="Fill"
-        SelectedDateTextFormat="ddd, dd MMM yyyy"
-        ShowMonthPicker="True"
-        ShowYearPicker="True">
-
-        <cal:Calendar.HeaderSectionTemplate>
-            <controls:CalenderHeaderNew />
-        </cal:Calendar.HeaderSectionTemplate>
     </cal:Calendar>
 </ContentPage>

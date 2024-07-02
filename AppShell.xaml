@@ -15,7 +15,7 @@
         </Tab>
         <Tab Title="My Team"
              Icon="team.png">
-            <ShellContent ContentTemplate="{DataTemplate views:CalenderdemoRange}"/>
+            <ShellContent ContentTemplate="{DataTemplate views:CalenderwithHeader}"/>
         </Tab>
         <Tab Title="Actions"
              Icon="menubar.png">
@@ -23,11 +23,11 @@
         </Tab>
         <Tab Title="Directory"
              Icon="people.png">
-            <ShellContent ContentTemplate="{DataTemplate views:HomePage}"/>
+            <ShellContent ContentTemplate="{DataTemplate views:CalenderWithHeaderAndEvent}"/>
         </Tab>
         <Tab Title="Record"
              Icon="record.png">
-            <ShellContent ContentTemplate="{DataTemplate views:HomePage}"/>
+            <ShellContent ContentTemplate="{DataTemplate views:CalenderdemoRange}"/>
         </Tab>
     </TabBar>
 

@@ -2,10 +2,10 @@ using Plugin.Maui.Calendar.Models;
 
 namespace CascadePOCHomePage.View;
 
-public partial class CalenderdemoRange : ContentPage
+public partial class CalenderWithHeaderAndEvent : ContentPage
 {
     public EventCollection Events { get; set; }
-    public CalenderdemoRange()
+    public CalenderWithHeaderAndEvent()
 	{
 		InitializeComponent();
         BindingContext = this;

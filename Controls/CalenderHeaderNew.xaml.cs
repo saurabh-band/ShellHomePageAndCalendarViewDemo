@@ -1,11 +1,11 @@
 namespace CascadePOCHomePage.Controls;
 
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CalenderHeaderNew : DataTemplate
+[XamlCompilation(XamlCompilationOptions.Compile)]
+public partial class CalenderHeaderNew : DataTemplate
+{
+    public CalenderHeaderNew()
     {
-        public CalenderHeaderNew()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
+}
 

@@ -1,6 +1,4 @@
 ﻿using Microsoft.Extensions.Logging;
-using Plugin.Maui.CalendarStore;
-using Syncfusion.Maui.Core.Hosting;
 
 namespace CascadePOCHomePage
 {
@@ -9,16 +7,15 @@ namespace CascadePOCHomePage
 		public static MauiApp CreateMauiApp()
 		{
 			var builder = MauiApp.CreateBuilder();
-
-			builder.ConfigureSyncfusionCore();
-			builder.Services.AddSingleton<ICalendarStore>(CalendarStore.Default);
 			builder
 				.UseMauiApp<App>()
 				.ConfigureFonts(fonts =>
 				{
 					fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 					fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-				});
+                    fonts.AddFont("font-awesome-5-free-solid.otf", "FontAwesomeSolid");
+                    fonts.AddFont("font-awesome-5-free-regular.otf", "FontAwesomeRegular");
+                });
 
 #if DEBUG
 			builder.Logging.AddDebug();

@@ -2,18 +2,13 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:cal="clr-namespace:Plugin.Maui.Calendar.Controls;assembly=Plugin.Maui.Calendar"
+             xmlns:controls="clr-namespace:CascadePOCHomePage.Controls"
              x:Class="CascadePOCHomePage.View.CalenderdemoRange"
              Title="CalenderdemoRange">
     <cal:RangeSelectionCalendar
-        ShowMonthPicker="True"
-        ShowYearPicker="True"
-        Day="14"
-        Month="5"
-        Year="2019"
-        VerticalOptions="Fill"
-        HorizontalOptions="Fill"
         Events="{Binding Events}"
-        EventsScrollViewVisible="True">
+        EventsScrollViewVisible="True" BackgroundColor="White">
+        
         <cal:RangeSelectionCalendar.EventTemplate>
             <DataTemplate>
                 <VerticalStackLayout>
@@ -22,6 +17,10 @@
                 </VerticalStackLayout>
             </DataTemplate>
         </cal:RangeSelectionCalendar.EventTemplate>
+
+        <cal:RangeSelectionCalendar.HeaderSectionTemplate>
+            <controls:CalenderHeaderNew/>
+        </cal:RangeSelectionCalendar.HeaderSectionTemplate>
     </cal:RangeSelectionCalendar>
 
 </ContentPage>

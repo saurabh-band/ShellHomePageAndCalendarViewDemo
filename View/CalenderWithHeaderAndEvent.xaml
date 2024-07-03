@@ -8,12 +8,9 @@
 
     <cal:Calendar
         Events="{Binding Events}"
-        EventsScrollViewVisible="True">
+        EventsScrollViewVisible="True"
+        BackgroundColor="White">
         
-        <cal:Calendar.HeaderSectionTemplate>
-            <controls:CalenderHeaderNew />
-        </cal:Calendar.HeaderSectionTemplate>
-
         <cal:Calendar.EventTemplate>
             <DataTemplate>
                 <VerticalStackLayout>
@@ -22,5 +19,10 @@
                 </VerticalStackLayout>
             </DataTemplate>
         </cal:Calendar.EventTemplate>
+
+        <cal:Calendar.HeaderSectionTemplate>
+            <controls:CalenderHeaderNew />
+        </cal:Calendar.HeaderSectionTemplate>
+
     </cal:Calendar>
 </ContentPage>

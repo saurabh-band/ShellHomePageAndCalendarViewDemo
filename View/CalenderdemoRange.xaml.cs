@@ -8,7 +8,6 @@ public partial class CalenderdemoRange : ContentPage
     public CalenderdemoRange()
 	{
 		InitializeComponent();
-        BindingContext = this;
 
         Events = new EventCollection
         {
@@ -34,6 +33,8 @@ public partial class CalenderdemoRange : ContentPage
                 new EventModel { Name = "Cool event6", Description = "This is Cool event6's description!" }
             }
         };
+
+        BindingContext = this;
 
     }
 

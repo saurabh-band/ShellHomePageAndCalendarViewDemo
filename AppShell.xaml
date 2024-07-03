@@ -23,11 +23,14 @@
         </Tab>
         <Tab Title="Directory"
              Icon="people.png">
-            <ShellContent ContentTemplate="{DataTemplate views:CalenderWithHeaderAndEvent}"/>
+            <ShellContent Title="Calender 1" ContentTemplate="{DataTemplate views:CalenderWithHeaderAndEvent}"/>
+            <ShellContent Title="Calender 2" ContentTemplate="{DataTemplate views:CalenderWithHeaderAndEvent}"/>
+
         </Tab>
         <Tab Title="Record"
              Icon="record.png">
-            <ShellContent ContentTemplate="{DataTemplate views:CalenderdemoRange}"/>
+            <ShellContent Title="Cal-1" ContentTemplate="{DataTemplate views:CalenderdemoRange}"/>
+            <ShellContent Title="Cal-2" ContentTemplate="{DataTemplate views:CalenderdemoRange}"/>
         </Tab>
     </TabBar>
 

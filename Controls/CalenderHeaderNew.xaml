@@ -41,9 +41,9 @@
                VerticalOptions="Center">
                <Label.FormattedText>
                    <FormattedString>
-                       <Span Text="{Binding LayoutUnitText, Mode=TwoWay}" />
-                       <Span Text=", " />
-                       <Span Text="{Binding Year, Mode=TwoWay}" />
+                       <Span Text="{Binding LayoutUnitText, Mode=TwoWay}" TextColor="Black" />
+                       <Span Text=", " TextColor="Black" />
+                       <Span Text="{Binding Year, Mode=TwoWay}" TextColor="Black"/>
                    </FormattedString>
                </Label.FormattedText>
         </Label>

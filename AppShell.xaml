@@ -29,8 +29,7 @@
         </Tab>
         <Tab Title="Record"
              Icon="record.png">
-            <ShellContent Title="Cal-1" ContentTemplate="{DataTemplate views:CalenderdemoRange}"/>
-            <ShellContent Title="Cal-2" ContentTemplate="{DataTemplate views:CalenderdemoRange}"/>
+            <ShellContent Title="Calendar" ContentTemplate="{DataTemplate views:CalenderdemoRange}"/>
         </Tab>
     </TabBar>
 

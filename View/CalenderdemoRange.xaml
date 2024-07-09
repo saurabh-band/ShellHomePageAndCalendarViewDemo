@@ -4,14 +4,17 @@
              xmlns:cal="clr-namespace:Plugin.Maui.Calendar.Controls;assembly=Plugin.Maui.Calendar"
              xmlns:controls="clr-namespace:CascadePOCHomePage.Controls"
              x:Class="CascadePOCHomePage.View.CalenderdemoRange"
-             Title="CalenderdemoRange">
+             Title="CalenderdemoRange"
+             BackgroundColor="White">
     <cal:RangeSelectionCalendar
         Events="{Binding Events}"
-        EventsScrollViewVisible="True" BackgroundColor="White">
+        EventsScrollViewVisible="True" 
+        BackgroundColor="White"
+        Margin="15,5,15,15">
         
         <cal:RangeSelectionCalendar.EventTemplate>
             <DataTemplate>
-                <VerticalStackLayout>
+                <VerticalStackLayout >
                     <Label Text="{Binding Name}" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
                     <Label Text="{Binding Description}" TextColor="Black" FontSize="Medium" Margin="0,0,0,10"/>
                 </VerticalStackLayout>

@@ -22,18 +22,19 @@
                 WidthRequest="36">
             <Label FontAttributes="Bold"
                    FontFamily="{Binding FontAwesome}"
-                   FontSize="20"
+                   FontSize="25"
                    HorizontalOptions="Center"
                    HorizontalTextAlignment="Center"
                    InputTransparent="True"
                    Text="{x:Static helpers:IconFontAwesome.Less}"
-                   TextColor="{Binding ArrowsColor}"
+                   TextColor="Blue"
                    VerticalOptions="Center"
                    VerticalTextAlignment="Center" />
             <Border.GestureRecognizers>
                    <TapGestureRecognizer Command="{Binding PrevLayoutUnitCommand}" />
             </Border.GestureRecognizers>
         </Border>
+        <!--{Binding ArrowsColor}-->
 
         <Label Grid.Column="1"
                FontAttributes="Bold"
@@ -66,7 +67,7 @@
                    HorizontalTextAlignment="Center"
                    InputTransparent="True"
                    Text="{x:Static helpers:IconFontAwesome.Greater}"
-                   TextColor="{Binding ArrowsColor}"
+                   TextColor="Blue"
                    VerticalOptions="Center"
                    VerticalTextAlignment="Center" />
             <Border.GestureRecognizers>
